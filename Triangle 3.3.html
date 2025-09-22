@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle Type</title>
+</head>
+<body>
+    <h1>Triangle Type Determiner</h1>
+
+    <script>
+        // 1) Prompt the user for input
+        var a = prompt("Enter the length of the first side of the triangle:");
+        var b = prompt("Enter the length of the second side of the triangle:");
+        var c = prompt("Enter the length of the third side of the triangle:");
+
+        // Convert the input values to numbers
+        a = parseFloat(a);
+        b = parseFloat(b);
+        c = parseFloat(c);
+
+        // 2) Function to determine the type of triangle
+        function determineTriangle(a, b, c) {
+            // Check if the inputs are numbers
+            if (isNaN(a) || isNaN(b) || isNaN(c)) {
+                alert("Please enter valid numbers.");
+            } else {
+                // 3) Determine the triangle type using if...else statements
+                if (a === b && b === c) {
+                    alert("The triangle is EQUILATERAL.");
+                } else if (a === b || b === c || a === c) {
+                    alert("The triangle is ISOSCELES.");
+                } else {
+                    alert("The triangle is SCALENE.");
+                }
+            }
+        }
+
+        // 4) Call the function with the user input
+        determineTriangle(a, b, c);
+    </script>
+</body>
+</html>
